@@ -1,0 +1,25 @@
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+   <title>Brain storage</title>
+   <link>http://ivgivanov.info/</link>
+   <description>Recent content on Brain storage</description>
+   <generator>Hugo -- gohugo.io</generator>
+   <language>en-us</language>
+   <lastBuildDate>Sat, 25 Apr 2020 18:22:39 +0200</lastBuildDate>
+   
+       <atom:link href="http://ivgivanov.info/index.xml" rel="self" type="application/rss+xml" />
+   
+   
+     <item>
+       <title>Hello World</title>
+       <link>http://ivgivanov.info/posts/hello-world/</link>
+       <pubDate>Sat, 25 Apr 2020 18:22:39 +0200</pubDate>
+       
+       <guid>http://ivgivanov.info/posts/hello-world/</guid>
+       <description>&lt;p&gt;Hello World&lt;/p&gt;
+</description>
+     </item>
+   
+ </channel>
+</rss>
