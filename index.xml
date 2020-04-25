@@ -17,7 +17,8 @@
        <pubDate>Sat, 25 Apr 2020 18:22:39 +0200</pubDate>
        
        <guid>http://ivgivanov.info/posts/hello-world/</guid>
-       <description>&lt;p&gt;Hello World&lt;/p&gt;
+       <description>&lt;p&gt;Hello World
+This is my first post using Hugo and written only using the command line. This is coing to be fun!&lt;/p&gt;
 </description>
      </item>
    
