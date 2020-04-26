@@ -17,8 +17,12 @@
        <pubDate>Sat, 25 Apr 2020 18:22:39 +0200</pubDate>
        
        <guid>http://ivgivanov.info/posts/hello-world/</guid>
-       <description>&lt;p&gt;Hello World
-This is my first post using Hugo and written only using the command line. This is coing to be fun!&lt;/p&gt;
+       <description>&lt;p&gt;Hello World!&lt;/p&gt;
+&lt;p&gt;This is my first post using Hugo and written only using the command line. This is going to be fun!&lt;/p&gt;
+&lt;p&gt;This is actually being hosted completely for free using GitHub Pages. Of course it supports custom domains, so baiscally if you have your own domain name you don&amp;rsquo;t even need to pay for and maintain hosting system. I&amp;rsquo;m still exploring Hugo, the themes and how to set up menus etc.&lt;!-- raw HTML omitted --&gt;
+For upcomming posts I&amp;rsquo;ll probably switch to using VS Code with some markdown plugin. It should make it a bit easier to write and edit.&lt;/p&gt;
+&lt;p&gt;Despite the &lt;em&gt;public&lt;/em&gt; repository where I&amp;rsquo;m pushing the rendered site, I&amp;rsquo;m also tracking changes of the pure content and Hugo settings in a separate &lt;em&gt;private&lt;/em&gt; repository. I can safely say that once you understand the concept, it makes quite a lot of sense and is easy to use.&lt;/p&gt;
+&lt;p&gt;That would be it for the first post. I&amp;rsquo;m going to figure out how to use &lt;em&gt;menus&lt;/em&gt; and thena add more pasts. Cheers!&lt;/p&gt;
 </description>
      </item>
    
