@@ -3,26 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://ivgivanov.info/</loc>
+    <loc>https://ivgivanov.info/</loc>
     <lastmod>2020-04-25T18:22:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ivgivanov.info/posts/hello-world/</loc>
+    <loc>https://ivgivanov.info/posts/hello-world/</loc>
     <lastmod>2020-04-25T18:22:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ivgivanov.info/posts/</loc>
+    <loc>https://ivgivanov.info/posts/</loc>
     <lastmod>2020-04-25T18:22:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ivgivanov.info/categories/</loc>
+    <loc>https://ivgivanov.info/categories/</loc>
   </url>
   
   <url>
-    <loc>http://ivgivanov.info/tags/</loc>
+    <loc>https://ivgivanov.info/tags/</loc>
   </url>
   
 </urlset>

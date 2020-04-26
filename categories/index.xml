@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
  <channel>
    <title>Categories on Brain storage</title>
-   <link>http://ivgivanov.info/categories/</link>
+   <link>https://ivgivanov.info/categories/</link>
    <description>Recent content in Categories on Brain storage</description>
    <generator>Hugo -- gohugo.io</generator>
    <language>en-us</language>
    
-       <atom:link href="http://ivgivanov.info/categories/index.xml" rel="self" type="application/rss+xml" />
+       <atom:link href="https://ivgivanov.info/categories/index.xml" rel="self" type="application/rss+xml" />
    
    
      <item>
        <title>Hello World</title>
-       <link>http://ivgivanov.info/posts/hello-world/</link>
+       <link>https://ivgivanov.info/posts/hello-world/</link>
        <pubDate>Sat, 25 Apr 2020 18:22:39 +0200</pubDate>
        
-       <guid>http://ivgivanov.info/posts/hello-world/</guid>
+       <guid>https://ivgivanov.info/posts/hello-world/</guid>
        <description>&lt;p&gt;Hello World!&lt;/p&gt;
 &lt;p&gt;This is my first post using Hugo and written only using the command line. This is going to be fun!&lt;/p&gt;
 &lt;p&gt;This is actually being hosted completely for free using GitHub Pages. Of course it supports custom domains, so baiscally if you have your own domain name you don&amp;rsquo;t even need to pay for and maintain hosting system. I&amp;rsquo;m still exploring Hugo, the themes and how to set up menus etc.&lt;!-- raw HTML omitted --&gt;
