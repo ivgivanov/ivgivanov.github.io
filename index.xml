@@ -6,10 +6,23 @@
    <description>Recent content on Brain storage</description>
    <generator>Hugo -- gohugo.io</generator>
    <language>en-us</language>
-   <lastBuildDate>Sat, 25 Apr 2020 18:22:39 +0200</lastBuildDate>
+   <lastBuildDate>Sun, 26 Apr 2020 15:32:07 +0200</lastBuildDate>
    
        <atom:link href="https://ivgivanov.info/index.xml" rel="self" type="application/rss+xml" />
    
+   
+     <item>
+       <title>About Me</title>
+       <link>https://ivgivanov.info/posts/about-me/</link>
+       <pubDate>Sun, 26 Apr 2020 15:32:07 +0200</pubDate>
+       
+       <guid>https://ivgivanov.info/posts/about-me/</guid>
+       <description>&lt;p&gt;Hi there!&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m Ivaylo [Ivo] Ivanov. I&amp;rsquo;m an IT oriented person working in server virtualization field. I&amp;rsquo;ve been breathing &lt;strong&gt;VMware&lt;/strong&gt; for the past 7 years, working with many products from their portfolio. Even though majority of my IT career was on the Ops/Engineering side, I always enjoy writing scripts. I guess it&amp;rsquo;s safe to say that I&amp;rsquo;m quite interested in programming, probably ever since I finished university (where actually this was may major, but somehow I tried to get around it).&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m extremely happy that since 2017 I joined &lt;a href=&#34;https://runecast.com&#34;&gt;&lt;strong&gt;Runecast&lt;/strong&gt;&lt;/a&gt;. A startup, founded by a group of crazy smart people and also amazing friends! This makes me part of a software company where I learned A LOT new stuff. Hell, I even have committed some (&lt;em&gt;simple&lt;/em&gt;) JAVA code which is running in production. On daily basis I&amp;rsquo;m taking care of the virtual infrastructure, exploring new technologies and helping developers to be more productive in every way I can.&lt;/p&gt;
+&lt;p&gt;Things you can hear me say during my work time include, but not limited to: vmware, git, sdk, api, java, powershell, bash, jenkins, postgres, tomcat, jira, confluence, script, workflow, scrum, apt, ssh, &amp;ldquo;do you hear me now?&amp;rdquo; (while WFH).&lt;/p&gt;
+</description>
+     </item>
    
      <item>
        <title>Hello World</title>
@@ -18,11 +31,11 @@
        
        <guid>https://ivgivanov.info/posts/hello-world/</guid>
        <description>&lt;p&gt;Hello World!&lt;/p&gt;
-&lt;p&gt;This is my first post using Hugo and written only using the command line. This is going to be fun!&lt;/p&gt;
-&lt;p&gt;This is actually being hosted completely for free using GitHub Pages. Of course it supports custom domains, so baiscally if you have your own domain name you don&amp;rsquo;t even need to pay for and maintain hosting system. I&amp;rsquo;m still exploring Hugo, the themes and how to set up menus etc.&lt;!-- raw HTML omitted --&gt;
-For upcomming posts I&amp;rsquo;ll probably switch to using VS Code with some markdown plugin. It should make it a bit easier to write and edit.&lt;/p&gt;
+&lt;p&gt;This is my first post using Hugo and written only using the command line. It&amp;rsquo;s going to be fun!&lt;/p&gt;
+&lt;p&gt;This is actually being hosted completely for free using GitHub Pages. Of course, it supports custom domains, so basically if you have your own domain name you don&amp;rsquo;t even need to pay for and maintain hosting system. I&amp;rsquo;m still exploring Hugo, the themes and how to set up menus etc.
+For upcoming posts I&amp;rsquo;ll probably switch to using VS Code with some markdown plugin. It should make it a bit easier to write and edit.&lt;/p&gt;
 &lt;p&gt;Despite the &lt;em&gt;public&lt;/em&gt; repository where I&amp;rsquo;m pushing the rendered site, I&amp;rsquo;m also tracking changes of the pure content and Hugo settings in a separate &lt;em&gt;private&lt;/em&gt; repository. I can safely say that once you understand the concept, it makes quite a lot of sense and is easy to use.&lt;/p&gt;
-&lt;p&gt;That would be it for the first post. I&amp;rsquo;m going to figure out how to use &lt;em&gt;menus&lt;/em&gt; and thena add more pasts. Cheers!&lt;/p&gt;
+&lt;p&gt;That would be it for the first post. I&amp;rsquo;m going to figure out how to use &lt;em&gt;menus&lt;/em&gt; and then add more pasts. Cheers!&lt;/p&gt;
 </description>
      </item>
    

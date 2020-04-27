@@ -3,8 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ivgivanov.info/posts/about-me/</loc>
+    <lastmod>2020-04-26T15:32:07+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/tags/aboutme/</loc>
+    <lastmod>2020-04-26T15:32:07+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ivgivanov.info/</loc>
-    <lastmod>2020-04-25T18:22:39+02:00</lastmod>
+    <lastmod>2020-04-26T15:32:07+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/categories/</loc>
+    <lastmod>2020-04-26T15:32:07+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/posts/</loc>
+    <lastmod>2020-04-26T15:32:07+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/categories/small-talk/</loc>
+    <lastmod>2020-04-26T15:32:07+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/tags/</loc>
+    <lastmod>2020-04-26T15:32:07+02:00</lastmod>
   </url>
   
   <url>
@@ -13,16 +43,8 @@
   </url>
   
   <url>
-    <loc>https://ivgivanov.info/posts/</loc>
+    <loc>https://ivgivanov.info/tags/helloworld/</loc>
     <lastmod>2020-04-25T18:22:39+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ivgivanov.info/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ivgivanov.info/tags/</loc>
   </url>
   
 </urlset>
