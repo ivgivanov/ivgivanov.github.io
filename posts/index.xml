@@ -6,10 +6,45 @@
    <description>Recent content in Posts on Brain storage</description>
    <generator>Hugo -- gohugo.io</generator>
    <language>en-us</language>
-   <lastBuildDate>Sun, 26 Apr 2020 15:32:07 +0200</lastBuildDate>
+   <lastBuildDate>Sun, 31 May 2020 21:22:05 +0200</lastBuildDate>
    
        <atom:link href="https://ivgivanov.info/posts/index.xml" rel="self" type="application/rss+xml" />
    
+   
+     <item>
+       <title>100 Days of Code</title>
+       <link>https://ivgivanov.info/posts/100-days-of-code/</link>
+       <pubDate>Sun, 31 May 2020 21:22:05 +0200</pubDate>
+       
+       <guid>https://ivgivanov.info/posts/100-days-of-code/</guid>
+       <description>&lt;p&gt;I was having the &lt;a href=&#34;https://www.100daysofcode.com/&#34; target=&#34;_blank&#34; style=&#34;text-decoration:underline;&#34;&gt;100daysOfCode&lt;/a&gt;
+ challenge page opened in my browser for about a month before I actually decided to start. It might be a late Sunday evening decision, but I feel finally ready to start this commitment! This is going to be totally new experience for me, but since it&amp;rsquo;s something I really want to do I think I&amp;rsquo;ll enjoy the ride.&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;I consider myself privileged to already work in a software company. Even though I&amp;rsquo;m not a developer (&lt;em&gt;yet&lt;/em&gt;), in my current position I often act as a bridge between the development team and the technology our software works with. &lt;a href=&#34;https://runecast.com&#34; target=&#34;_blank&#34; style=&#34;text-decoration:underline;&#34;&gt;Runecast Analyzer&lt;/a&gt;
+ is a knowledge automation solution which does analysis of VMware infrastructure and AWS public cloud against known and documented issues, security profiles, best practices etc.&lt;br&gt;
+I, as a VMware Engineer, often browse through the VMware SDK while defining specific requirements for the next piece of the puzzle we want to automate. With time, I started to look also more at the Java implementation which helps me be more productive while communicating with our awesome developers. Little by little my interest grew stronger and I decided it is time to take it to the next level.&lt;/p&gt;
+&lt;h2 id=&#34;goal&#34;&gt;Goal&lt;/h2&gt;
+&lt;p&gt;My ultimate goal after completing this challenge is to be able to pass an interview for junior Java developer. I&amp;rsquo;m not looking into changing my job completely, instead I see this more like a milestone I want to achieve.&lt;br&gt;
+The following should help me get there:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Develop a habit to code more often&lt;/li&gt;
+&lt;li&gt;Learn Spring framework&lt;/li&gt;
+&lt;li&gt;Understand Maven&lt;/li&gt;
+&lt;li&gt;Learn to write more complex SQL queries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;plan&#34;&gt;Plan&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m going to leverage my current knowledge and expertise in the VMware domain and strengthen it with exploring how things actually work in the background.&lt;br&gt;
+Along with that, I&amp;rsquo;ll start a Java programming course at &lt;a href=&#34;https://pluralsight.com&#34; target=&#34;_blank&#34; style=&#34;text-decoration:underline;&#34;&gt;pluralsight&lt;/a&gt;
+ where I have annual subscription as a &lt;a href=&#34;https://vexpert.vmware.com/directory/112&#34; target=&#34;_blank&#34; style=&#34;text-decoration:underline;&#34;&gt;VMware vExpert&lt;/a&gt;
+. And most importantly, practice, practice and practice!&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll be sending regular updates on &lt;a href=&#34;https://twitter.com/ivgivanov&#34; target=&#34;_blank&#34; style=&#34;text-decoration:underline;&#34;&gt;Twitter&lt;/a&gt;
+ and when there is something more I want to say I&amp;rsquo;ll be posting it as a blog post.&lt;/p&gt;
+&lt;h2 id=&#34;connect&#34;&gt;Connect&lt;/h2&gt;
+&lt;p&gt;Already started following some people on twitter which are on different levels of this challenge. The community seems great and I&amp;rsquo;m glad to become a part of it.
+I&amp;rsquo;m always happy to hear feedback or suggestions. If you have an advice you want to share or just want to chat, feel free to reach out via &lt;a href=&#34;https://twitter.com/ivgivanov&#34; target=&#34;_blank&#34; style=&#34;text-decoration:underline;&#34;&gt;Twitter&lt;/a&gt;
+.&lt;/p&gt;
+</description>
+     </item>
    
      <item>
        <title>About Me</title>
@@ -19,7 +54,8 @@
        <guid>https://ivgivanov.info/posts/about-me/</guid>
        <description>&lt;p&gt;Hi there!&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m Ivaylo [Ivo] Ivanov. I&amp;rsquo;m an IT oriented person working in server virtualization field. I&amp;rsquo;ve been breathing &lt;strong&gt;VMware&lt;/strong&gt; for the past 7 years, working with many products from their portfolio. Even though majority of my IT career was on the Ops/Engineering side, I always enjoy writing scripts. I guess it&amp;rsquo;s safe to say that I&amp;rsquo;m quite interested in programming, probably ever since I finished university (where actually this was may major, but somehow I tried to get around it).&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m extremely happy that since 2017 I joined &lt;a href=&#34;https://runecast.com&#34;&gt;&lt;strong&gt;Runecast&lt;/strong&gt;&lt;/a&gt;. A startup, founded by a group of crazy smart people and also amazing friends! This makes me part of a software company where I learned A LOT new stuff. Hell, I even have committed some (&lt;em&gt;simple&lt;/em&gt;) JAVA code which is running in production. On daily basis I&amp;rsquo;m taking care of the virtual infrastructure, exploring new technologies and helping developers to be more productive in every way I can.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m extremely happy that since 2017 I joined &lt;a href=&#34;https://runecast.com&#34; target=&#34;_blank&#34; style=&#34;text-decoration:underline;&#34;&gt;&amp;lt;strong&amp;gt;Runecast&amp;lt;/strong&amp;gt;&lt;/a&gt;
+. A startup, founded by a group of crazy smart people and also amazing friends! This makes me part of a software company where I learned A LOT new stuff. Hell, I even have committed some (&lt;em&gt;simple&lt;/em&gt;) JAVA code which is running in production. On daily basis I&amp;rsquo;m taking care of the virtual infrastructure, exploring new technologies and helping developers to be more productive in every way I can.&lt;/p&gt;
 &lt;p&gt;Things you can hear me say during my work time include, but not limited to: vmware, git, sdk, api, java, powershell, bash, jenkins, postgres, tomcat, jira, confluence, script, workflow, scrum, apt, ssh, &amp;ldquo;do you hear me now?&amp;rdquo; (while WFH).&lt;/p&gt;
 </description>
      </item>

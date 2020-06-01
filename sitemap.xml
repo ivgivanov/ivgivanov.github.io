@@ -3,6 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ivgivanov.info/posts/100-days-of-code/</loc>
+    <lastmod>2020-05-31T21:22:05+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/tags/100daysofcode/</loc>
+    <lastmod>2020-05-31T21:22:05+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/categories/100daysofcode/</loc>
+    <lastmod>2020-05-31T21:22:05+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/</loc>
+    <lastmod>2020-05-31T21:22:05+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/categories/</loc>
+    <lastmod>2020-05-31T21:22:05+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/tags/challenge/</loc>
+    <lastmod>2020-05-31T21:22:05+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/tags/motivation/</loc>
+    <lastmod>2020-05-31T21:22:05+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/posts/</loc>
+    <lastmod>2020-05-31T21:22:05+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ivgivanov.info/tags/</loc>
+    <lastmod>2020-05-31T21:22:05+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ivgivanov.info/posts/about-me/</loc>
     <lastmod>2020-04-26T15:32:07+02:00</lastmod>
   </url>
@@ -13,27 +58,7 @@
   </url>
   
   <url>
-    <loc>https://ivgivanov.info/</loc>
-    <lastmod>2020-04-26T15:32:07+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ivgivanov.info/categories/</loc>
-    <lastmod>2020-04-26T15:32:07+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ivgivanov.info/posts/</loc>
-    <lastmod>2020-04-26T15:32:07+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ivgivanov.info/categories/small-talk/</loc>
-    <lastmod>2020-04-26T15:32:07+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ivgivanov.info/tags/</loc>
     <lastmod>2020-04-26T15:32:07+02:00</lastmod>
   </url>
   
