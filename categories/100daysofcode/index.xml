@@ -6,10 +6,40 @@
    <description>Recent content in 100daysOfCode on Brain storage</description>
    <generator>Hugo -- gohugo.io</generator>
    <language>en-us</language>
-   <lastBuildDate>Sun, 31 May 2020 21:22:05 +0200</lastBuildDate>
+   <lastBuildDate>Wed, 09 Sep 2020 12:26:42 +0200</lastBuildDate>
    
        <atom:link href="https://ivgivanov.info/categories/100daysofcode/index.xml" rel="self" type="application/rss+xml" />
    
+   
+     <item>
+       <title>100 Days of Code Completed</title>
+       <link>https://ivgivanov.info/posts/100-days-of-code-completed/</link>
+       <pubDate>Wed, 09 Sep 2020 12:26:42 +0200</pubDate>
+       
+       <guid>https://ivgivanov.info/posts/100-days-of-code-completed/</guid>
+       <description>&lt;h2 id=&#34;day-100-of-100daysofcode&#34;&gt;Day &lt;strong&gt;100&lt;/strong&gt; of #100DaysOfCode&lt;/h2&gt;
+&lt;p&gt;It&amp;rsquo;s a little hard to believe but &lt;strong&gt;I DID IT&lt;/strong&gt;! A hundred days, at least one hour per day working on my coding skills.&lt;/p&gt;
+&lt;p&gt;Was it difficult to keep up? Sometimes yes.&lt;br&gt;
+Besides normal things like having a bad day or not in a mood to code, during this challenge I had to handle other things like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;my birthday (30 y.o.)&lt;/li&gt;
+&lt;li&gt;my son&amp;rsquo;s birthday (4 y.o.)&lt;/li&gt;
+&lt;li&gt;family camping&lt;/li&gt;
+&lt;li&gt;flying abroad just me and my son&lt;/li&gt;
+&lt;li&gt;being sick&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But hey, that was very small portion of the whole challenge. Overall, I really liked it! The satisfaction of doings something you haven&amp;rsquo;t done before (and especially if it works) is really motivating.&lt;/p&gt;
+&lt;h2 id=&#34;my-approach&#34;&gt;My approach&lt;/h2&gt;
+&lt;p&gt;I have a full time job and a happy family with 4 year old kid at home. My free time is quite limited so I had to squeeze every possible minute. Mainly I was coding during the late evening, once my son goes to sleep. This often resulted in not much sleep and less time spend with my wife, but she was extremely supportive throughout this challenge (most of the time).&lt;/p&gt;
+&lt;p&gt;I was mixing theory (blogs, video lessons and tutorials) and practice. I&amp;rsquo;m not a fan of &amp;ldquo;just practice&amp;rdquo; because for me is important to understand how something works, not just that I managed to google a solution and apply it. Sometimes, I could be stuck with a 2-hours video for days until I put all the things together in my mind and make sure I can apply whatever I&amp;rsquo;m learning.&lt;/p&gt;
+&lt;p&gt;Last, but the most important one - find a mentor! I&amp;rsquo;m lucky to be working in a software company with great software engineers. The opportunity to talk to someone about what you do, at least to make sure you understand some complex concepts, is priceless. If you don&amp;rsquo;t know any devs so far don&amp;rsquo;t worry, the #100DaysOfCode community is very supportive and I&amp;rsquo;m sure many will offer you help if you just reach out.&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;I managed to cover all what I have planned (you can check my previous post). I wrote an app in 3 different ways, based on my Java knowledge I gained during the challenge. Very soon the last version will be publicly available to everyone (and hopefully useful).&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m going to speak more about my experience during the VMware Code&amp;rsquo;s CodeConnect conference. More info at &lt;a href=&#34;https://vmwarecodeconnect.github.io/CodeConnect2020/Ivaylo/&#34; target=&#34;_blank&#34; style=&#34;text-decoration:underline;&#34;&gt;CodeConect schedule&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Will I do the challenge again? Probably not soon. Will I continue coding? Hell yeah!&lt;/p&gt;
+</description>
+     </item>
    
      <item>
        <title>100 Days of Code</title>
