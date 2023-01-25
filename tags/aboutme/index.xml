@@ -12,6 +12,38 @@
    
    
      <item>
+       <title>VMware vCenter tasks and events collection</title>
+       <link>https://ivgivanov.info/posts/vcenter-tasks-events-collectors/</link>
+       <pubDate>Fri, 09 Dec 2022 15:23:22 +0200</pubDate>
+       
+       <guid>https://ivgivanov.info/posts/vcenter-tasks-events-collectors/</guid>
+       <description>&lt;p&gt;vCenter tasks and events provide valuable information that can be used for historical and audit purposes. They are stored in the vCenter Server&amp;rsquo;s database and available until the data retention setting is reached. By default tasks and events are cleaned up after 30 days and increasing this limit can result in a significant increase of the vCenter Server&amp;rsquo;s DB size. In this article, I&amp;rsquo;m going to share my experience with getting this data programmatically for use in a 3rd party software.&lt;/p&gt;
+&lt;h2 id=&#34;choosing-which-api-to-use&#34;&gt;Choosing which API to use&lt;/h2&gt;
+&lt;p&gt;I was involved in a project where vCenter tasks and events had to be collected with a Java client. Additionally, the required backward compatibility and presence of existing integration left no room for anything else but the vSphere Web Services API. In my opinion, it takes an effort to get used to it. It&amp;rsquo;s quite abstract (probably for a good reason) and you really need to get your hands dirty to start getting familiar with it. But let&amp;rsquo;s get to the point, using the vSphere Web Services API to get tasks and events.&lt;/p&gt;
+&lt;h2 id=&#34;the-managers&#34;&gt;The Managers&lt;/h2&gt;
+&lt;p&gt;Luckily, there are 2 &amp;ldquo;Managed Object&amp;rdquo; (to use VMware&amp;rsquo;s dictionary) that are perfect for the job:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://vdc-repo.vmware.com/vmwb-repository/dcr-public/c476b64b-c93c-4b21-9d76-be14da0148f9/04ca12ad-59b9-4e1c-8232-fd3d4276e52c/SDK/vsphere-ws/docs/ReferenceGuide/vim.TaskManager.html&#34; target=&#34;_blank&#34; style=&#34;text-decoration:underline;&#34;&gt;TaskManager&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://vdc-repo.vmware.com/vmwb-repository/dcr-public/c476b64b-c93c-4b21-9d76-be14da0148f9/04ca12ad-59b9-4e1c-8232-fd3d4276e52c/SDK/vsphere-ws/docs/ReferenceGuide/vim.event.EventManager.html&#34; target=&#34;_blank&#34; style=&#34;text-decoration:underline;&#34;&gt;EventManager&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The documentation is quite good and you can get the expected results pretty fast.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Tip: If you have access to vCenter Server you can navigate to https://vc-address/mob, authenticate and navigate to the desired Managed Object type where you can execute methods and see results directly in the browser. For example https://vc-address/mob/?moid=TaskManager&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;limitations&#34;&gt;Limitations&lt;/h2&gt;
+&lt;p&gt;Everything was going just fine until we started testing - data for some objects were missing.&lt;/p&gt;
+&lt;p&gt;A little back story, in this case, the collection was happening per object, as this was the best way to tie it to the rest of the application flow. Ok, moving on. Of course, there was an error logged:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;com.vmware.vim25.InvalidStateFaultMsg: The operation is not allowed in the current state.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;When I saw it first I pretty much ignored it, as I knew there were some hosts in &lt;em&gt;Not Connected&lt;/em&gt; state and I figured this was the cause. Later, after the missing data was obvious, I started to doubt my initial opinion, because it didn&amp;rsquo;t make much sense - the tasks and events are provided by the vCenter Server and reside on its database. The object state shouldn&amp;rsquo;t have any influence on that.&lt;/p&gt;
+&lt;p&gt;The answer was in another useful documentation &lt;a href=&#34;https://developer.vmware.com/docs/17686/vsphere-web-services-sdk-programming-guide-8-0/GUID-DDFF7502-D9A6-4E55-AEA3-93D14E32AC67.html&#34; target=&#34;_blank&#34; style=&#34;text-decoration:underline;&#34;&gt;vSphere Web Services SDK Programming Guide:&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;DestroyCollector – A HistoryCollector exists only for the current session. Invoke the DestroyCollector operation to explicitly destroy the collector before the session ends.&amp;quot;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Using the &lt;code&gt;CreateCollectorForTasks&lt;/code&gt; method of the &lt;em&gt;TaskManager&lt;/em&gt; (or its alternative in the &lt;em&gt;EventManager&lt;/em&gt;) creates a &lt;code&gt;TaskHistoryCollector&lt;/code&gt; but there is a limited number of those that can exist concurrently. The exact limit is &lt;em&gt;32&lt;/em&gt; as specified by the &lt;code&gt;maxCollector&lt;/code&gt; property of the &lt;em&gt;TaskManager&lt;/em&gt; or &lt;em&gt;EventManager&lt;/em&gt;. In the scope of the project, there was no need to continuously monitor the tasks of a given object, there for the collector could be safely destroyed once the initial collection is completed.&lt;/p&gt;
+&lt;p&gt;Implementing the use of &lt;code&gt;destroyCollector&lt;/code&gt; method helped to avoid reaching the &lt;code&gt;maxCollectors&lt;/code&gt; limit and effectively get all the data that was needed.&lt;/p&gt;
+</description>
+     </item>
+   
+     <item>
        <title>100 Days of Code - Challenge Completed!</title>
        <link>https://ivgivanov.info/posts/100-days-of-code-completed/</link>
        <pubDate>Wed, 09 Sep 2020 12:26:42 +0200</pubDate>
