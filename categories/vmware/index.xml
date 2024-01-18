@@ -6,10 +6,47 @@
    <description>Recent content in vmware on Brain storage</description>
    <generator>Hugo -- gohugo.io</generator>
    <language>en-us</language>
-   <lastBuildDate>Fri, 09 Dec 2022 15:23:22 +0200</lastBuildDate>
+   <lastBuildDate>Mon, 11 Dec 2023 18:12:38 +0200</lastBuildDate>
    
        <atom:link href="https://ivgivanov.info/categories/vmware/index.xml" rel="self" type="application/rss+xml" />
    
+   
+     <item>
+       <title>Troubleshoot missing ESXi host BIOS data</title>
+       <link>https://ivgivanov.info/posts/esxi-bios-vcenter/</link>
+       <pubDate>Mon, 11 Dec 2023 18:12:38 +0200</pubDate>
+       
+       <guid>https://ivgivanov.info/posts/esxi-bios-vcenter/</guid>
+       <description>&lt;p&gt;Recently, I was involved in the investigation of missing or incomplete ESXi BIOS info. I&amp;rsquo;ll share multiple ways how this data can be retrieved to troubleshoot such scenario, and what was the outcome of the investigation.&lt;/p&gt;
+&lt;h2 id=&#34;ui&#34;&gt;UI&lt;/h2&gt;
+&lt;h3 id=&#34;vsphere-client&#34;&gt;vSphere Client&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;https://vc-address/ui&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The vSphere Client is usually the go-to place for day-to-day operations. You can also find useful hardware information about your hosts, and of course, the BIOS version. Just select an ESXi host and navigate to:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Configure -&amp;gt; &amp;lt;scroll down to the Hardware section&amp;gt; -&amp;gt; Overview&lt;/code&gt; or &lt;code&gt;Configure -&amp;gt; &amp;lt;scroll down to the Hardware section&amp;gt; -&amp;gt; Firmware&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;esxi-host-client&#34;&gt;ESXi Host Client&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;https://esxi-host-address/ui&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The ESXi Host Client allows you to connect to a specific ESXi host rather than a vCenter Server. In my opinion, it&amp;rsquo;s less used and not recommended to make any changes through it if the host is managed by a vCenter Server. However, I don&amp;rsquo;t see a harm just to check the BIOS version and confirm it&amp;rsquo;s shown.&lt;/p&gt;
+&lt;p&gt;After login, you can locate the BIOS information within the &lt;code&gt;System Information&lt;/code&gt; widget on the host summary page.&lt;/p&gt;
+&lt;h2 id=&#34;digging-deeper&#34;&gt;Digging deeper&lt;/h2&gt;
+&lt;p&gt;Despite the user-friendly places where the ESXi host BIOS information is available, when troubleshooting missing data we may need to get deeper than that.&lt;/p&gt;
+&lt;h3 id=&#34;powercli-and-the-managed-object-browser-mob&#34;&gt;PowerCLI and the Managed Object Browser (MOB)&lt;/h3&gt;
+&lt;p&gt;I don&amp;rsquo;t know exactly how it actually works, but based on experience if the data is missing in the UI it also won&amp;rsquo;t be available neither from PowerCLI nor through the MOB (or API for that matter). However, including those methods in case there is no such strong dependency.&lt;/p&gt;
+&lt;h4 id=&#34;powercli&#34;&gt;PowerCLI&lt;/h4&gt;
+&lt;p&gt;Here is a &amp;ldquo;one-liner&amp;rdquo; to retrieve all possible host BIOS data and export it in a .csv&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Get-VMHost | Select-Object @{Name=&amp;quot;vendor&amp;quot;; Expression={ $_.ExtensionData.Hardware.SystemInfo.Vendor}},@{Name=&amp;quot;model&amp;quot;; Expression={ $_.ExtensionData.Hardware.SystemInfo.Model}},@{Name=&amp;quot;bios_vendor&amp;quot;; Expression={ $_.ExtensionData.Hardware.BiosInfo.Vendor}},@{Name=&amp;quot;bios_version&amp;quot;; Expression={ $_.ExtensionData.Hardware.BiosInfo.BiosVersion}},@{Name=&amp;quot;bios_releasedate&amp;quot;; Expression={ $_.ExtensionData.Hardware.BiosInfo.ReleaseDate}},@{Name=&amp;quot;bios_majorrelease&amp;quot;; Expression={ $_.ExtensionData.Hardware.BiosInfo.MajorRelease}},@{Name=&amp;quot;bios_minorrelease&amp;quot;; Expression={ $_.ExtensionData.Hardware.BiosInfo.MinorRelease}},@{Name=&amp;quot;bios_fw_majorrelease&amp;quot;; Expression={ $_.ExtensionData.Hardware.BiosInfo.FirmwareMajorRelease}},@{Name=&amp;quot;bios_fw_minorrelease&amp;quot;; Expression={ $_.ExtensionData.Hardware.BiosInfo.FirmwareMinorRelease}} | Export-Csv -Path &amp;lt;path-to-save.csv&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;vcenter-mob&#34;&gt;vCenter MOB&lt;/h4&gt;
+&lt;p&gt;Navigate to &lt;code&gt;https://vc-address/mob&lt;/code&gt; and authenticate. It&amp;rsquo;s possible to navigate through the interface and select the desired host, but I&amp;rsquo;ll share a shortcut: &lt;code&gt;https://vc-address/mob/?moid=&amp;lt;host-moid&amp;gt;&amp;amp;doPath=hardware.biosInfo&lt;/code&gt;. You can get the &lt;code&gt;host-moid&lt;/code&gt; directly from the vSphere Client. Just select the host and inspect the URL in the browser&amp;rsquo;s address bar. Somewhere in the middle, you&amp;rsquo;ll see something like &lt;code&gt;HostSystem:host-10688&lt;/code&gt; -&amp;gt; &lt;code&gt;host-10688&lt;/code&gt; is the moid.&lt;/p&gt;
+&lt;p&gt;_Tip: There is a MOB directly on ESXi host as well. You can access it at &lt;code&gt;https://esxi-host-address/mob&lt;/code&gt;. It&amp;rsquo;s often disabled (maybe in some versions by default) so if when you access that URL you see &lt;code&gt;503 Service Unavailable&lt;/code&gt; don&amp;rsquo;t panic. It&amp;rsquo;s possible to enable it via an advanced setting on the ESXi host &lt;code&gt;Config.HostAgent.plugins.solo.enableMob&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;esxi-host-console&#34;&gt;ESXi host console&lt;/h3&gt;
+&lt;p&gt;That&amp;rsquo;s probably one of the most low-level and reliable ways to retrieve not only BIOS, but also much more system information. You&amp;rsquo;ll need to SSH or use the DCUI to log in to the ESXi console interface.&lt;/p&gt;
+&lt;h4 id=&#34;esxcfg-info-command&#34;&gt;&lt;code&gt;esxcfg-info&lt;/code&gt; command&lt;/h4&gt;
+&lt;p&gt;Produces a huge amount of system and hardware information, including the BIOS info. It&amp;rsquo;s important to mention that it&amp;rsquo;s still possible to access this information even from your browser. Just head to &lt;code&gt;https://esxi-host-address/cgi-bin/esxcfg-info.cgi&lt;/code&gt;, authenticate and you&amp;rsquo;ll see all info directly there.&lt;/p&gt;
+&lt;h4 id=&#34;vsish--e-get-hardwarebiosbiosinfo-command&#34;&gt;&lt;code&gt;vsish -e get /hardware/bios/biosInfo&lt;/code&gt; command&lt;/h4&gt;
+&lt;p&gt;Shows only the BIOS information. You can adjust the path to explore other data as well. Currently, I&amp;rsquo;m not aware if it&amp;rsquo;s possible to invoke and get &lt;code&gt;vsish&lt;/code&gt; command data remotely.&lt;/p&gt;
+&lt;h2 id=&#34;results-from-the-investigation&#34;&gt;Results from the investigation&lt;/h2&gt;
+&lt;p&gt;After checking multiple of the above-mentioned sources of information in different environments (HP and also Dell servers) it came down to this: the &lt;code&gt;vsish -e get /hardware/bios/biosInfo&lt;/code&gt; command was showing correct BIOS info so the ESXi host itself knows this information. However, it was completely missing in the vCenter Server - therefore retrieving the data through PowerCLI or API would not return useful data. Seems to be related to the communication between ESXi and vCenter. Restarting the &lt;code&gt;vpxa&lt;/code&gt; agent on the ESXi host seems to help temporarily to get the data flow running, but doesn&amp;rsquo;t seem like a good solution or workaround. Hopefully, there will be a permanent fix by VMware sooner than later.&lt;/p&gt;
+</description>
+     </item>
    
      <item>
        <title>VMware vCenter tasks and events collection</title>
